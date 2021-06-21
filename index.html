@@ -12,6 +12,12 @@
 			  animation-duration: 1s;
 			  animation-name: fadeIn;
 			}
+			
+			#myprofile
+			{
+			  animation-delay: 1s;
+			  animation-name: disappear;
+			}
 		
 		    #aboutmebtn
 			{
@@ -21,9 +27,13 @@
 			
 			@keyframes fadeIn
 			{
-			  99% {
+			  50% {
 				visibility: hidden;
 				opacity: 0.5;
+			  }
+			  
+			  75% {
+				opacity: 0.75;
 			  }
 			  100% {
 				visibility: visible;
@@ -42,6 +52,11 @@
 			  {
 			    margin-left: 0%;
 			  }
+		    }
+			
+			@keysframe disappear
+			{
+				display: none;
 		    }
 			
 
@@ -84,6 +99,11 @@
 		<div>
 			<h2><p id = "user"></p></h2>
 		</div>
+
+<?php
+		echo "Date:".date();
+?>
+
 		
 		<div>
 			<button id = "aboutmebtn" onclick="showmsg()">Click several times to Know me</button>
